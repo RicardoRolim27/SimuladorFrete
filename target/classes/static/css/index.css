@@ -1,0 +1,27 @@
+ul li a {
+			color: white;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+li:hover{
+	background: white;
+}		
+
+		h3 {
+			color: blue;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		h4 {
+			color: blue;
+			text-align: center;
+			font-weight: bold;
+		}
+
+.footer {
+    color: black;
+    text-align: left;
+}

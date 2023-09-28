@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Consultor de Frete</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="C:\Users\Odete_Ricardo\Documents\workspace-spring-tool-suite-4-4.4.0.RELEASE\SimuladorFrete\SimuladorFrete\SimuladorFrete\SimuladorFrete\src\main\resources\templates\bootstrap-4.1.3-dist\css\bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/index.css">  
+
+<body class="container">
+  <header>
+    <div class="card">
+      <div class="card-header">
+        <div style="text-align: center;">
+        <nav class="navbar navbar-expand-sm bg-primary" style="height: 80px">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">O Projeto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/simuladorFrete">Simulador de Frete</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/opcoesCadastro">Cadastrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/cadastrarValorFrete">Cadastrar Valor de Frete</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/efetuarLogin">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <p th:inline="text">Olá [[${#httpServletRequest.remoteUser}]]</p>
+              <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Sign Out"/>
+            </form>
+              </li>
+          </ul>
+        </nav>
+        </div>
+        <div class="card" style="height: 300px; width: 100%;">
+          <img th:src="@{img/como-contratar-transportadora.jpg}" alt="como contratar seu frete"
+            style="height: 300px; width: 100%;">
+          <div class="card-img-overlay">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="card">
+    <div class="card-body">
+      <h3 class="container-fluid">Calcule e contrate seu frete online</h3>
+            <h4 class="container-fluid">Tenha acesso às melhores transportadoras
+              e envie sua mercadoria de forma simples e rápida!
+            </h4>
+      <h2 style="text-align: center;">Nunca foi tão fácil encontrar o melhor serviço, pelo menor preço!</h2>
+      <h3>Veja abaixo:</h3>
+      <br>
+      <section>
+        <div class="card-group row">
+          <div class="col">
+            <figure>
+            <img src="img/dados-da-mercadoria.png" alt="dados da mercadoria" style="height: 50px; width: 50px;">
+            <figcaption>Preencha os dados de sua mercadoria</figcaption>
+          </figure>
+          </div>
+          <div class="col">
+             <figure>
+            <img src="img/informe-o-endereco.png" alt="endereço" style="height: 50px; width: 50px;">
+            <figcaption>Informe o endereço</figcaption>
+          </figure>
+          </div>
+          <div class="col">
+            <figure>
+            <img src="img/escolha-a-transportadora.png" alt="transportadora" style="height: 50px; width: 50px;">
+            <figcaption>Escolha a transportadora</figcaption>
+          </figure>
+          </div>
+          <div class="col">
+            <figure>
+            <img src="img/aguarde-a-coleta.png" alt="coleta" style="height: 50px; width: 50px;">
+            <figcaption>Aguarde a coleta</figcaption>
+          </figure>
+          </div>
+          <div class="col">
+            <figure>
+            <img src="img/rastreie-sua-carga.png" alt="rastreie-sua-carga" style="height: 50px; width: 50px;">
+            <figcaption>Rastrei sua mercadoria</figcaption>
+          </figure>
+          </div>
+        </div>
+      </section>
+      <div class="form-group">
+        <form style="text-align: center;">
+          <a class="btn btn-outline-primary" rel="stylesheet" type="text/css" href="http://localhost:8080/simuladorFrete">Experimente agora online, é grátis!</a>
+        </form>
+      </div>
+      <br>
+      <hr>
+         <div class="card-group row" style="width: 100%">
+          <div class="col" style="text-align: center;">
+          <a href="#" style="text-align: right;"><img class="card-img-bottom" src="img/truck_icon.ico" 
+                 alt="parceiros" style="height:200px; width: 200px; padding-left: 10px"></a>
+        
+            <h4 class="card-title" style="text-align: center;">PARCEIROS</h4>
+            <p class="card-text" style="text-align: center; font-size: 30px ">Conheça nossos parceiros</p>
+          </div>
+      <div class="col" style="text-align: center;">
+    
+      <h4 class="card-title" style="text-align: center;">FORUM</h4>
+      <p class="card-text-right" style="text-align: center; font-size: 30px ">Participe de nosso forum</p>
+      <a href="#"><img class="card-img-right" src="img/forum-icon1.jpg" alt="forum" style="height: 200px; width: 200px;"></a>
+    </div>
+</div>
+<br>
+<hr>
+      
+  <div class="card-footer">
+    <footer>
+      <div class="card-group row">
+        <div class="col" style="text-align: left;">
+      <h4 class="footer">Empresa: Projeto Ceep Ltda.</h4>
+      <h4 class="footer">CNPJ: 02.664.479/0001-02</h4>
+      <h4 class="footer">Telefone: (45) 9 99624827 <br> ou (45) 9 9866-8555</h4>
+      </div>
+      <div class="col" style="text-align: left;">
+      <h4 class="footer">Edereço: Rua Natal, 1107 - Centro</h4>
+      <h4 class="footer">Redes Sociais</h4>
+        <a href="#" style="font-size: 30px;"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" style="font-size: 30px;"><i class="fab fa-twitter-square"></i></a>
+        </div>
+      </div>      
+
+    </footer>
+  </div>
+</body>
+
+</html>
